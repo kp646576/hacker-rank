@@ -14,6 +14,18 @@ def insertionSort(ar):
       print ' '.join(map(str, ar))
     return ""
 
+def insertionSort2(ar):
+    for i in range(1, len(ar)):
+        value = ar[i]
+        j = i - 1
+        while ar[j] >= value and j >= 0:
+            ar[j + 1] = ar[j]
+            j -= 1
+            ar[j + 1] = value
+              
+        print ' '.join(map(str, ar))
+    return ""
+
 m = input()
 ar = [int(i) for i in raw_input().strip().split()]
 insertionSort(ar)
